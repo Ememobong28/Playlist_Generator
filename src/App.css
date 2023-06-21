@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+ @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3&display=swap');
+
+ html,body{
+    background-color: #0665A2;
+    color: #fff;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    line-height: 1.62;
+    padding: 16px 0;
+ }
+
+ button{
+    outline: none;
+    border: none;
+    background: transparent;
+ }
+
+ .App{
+    width:100%;
+    max-width:800px;
+    margin: 10px auto;
+ }
+ 
+ .playlist{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .playlist .info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .playlist .info .title{
+    font-size: 24px;
+
+ }
+
+ .controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+ }
+
+ .controls .buttons{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    width: 200px;
+    margin-left: 50px;
+ }
+
+ .btn{
+    cursor: pointer;
+    color:white;
+    font-size: 36px;
+    
+ }
+
+ .btn:active{
+    transform: translateY(1px);
+ }
+
+ .tracks{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+ }
+
+ .song{
+    width:100%;
+    display: flex;
+    padding:15px 20px;
+    cursor:pointer;
+ }
+
+ .song:hover{
+    background: rgba(0, 0, 0,0.1);
+ }
+
+ .song:active{
+    transform: translateY(1px);
+ }
+
+ .song .position{
+    font-size: 20px;
+    margin-right: 15px;
+ }
+
+ .song .title{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    margin:0;
+ }
+.song .title .movie{
+    font-size: 14px;
+    color: #dedede;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+ .song .duration{
+    margin-left: auto;
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+ .button-play-pause span{
+    display: block;
+    box-sizing: border-box;
+    width: 0;
+    height: 75px;
+    border-color: transparent transparent transparent white;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0 0 0 60px;
+    transition: 100ms all ease;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .button-play-pause span.paused{
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ .current-song{
+    margin-left: auto;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ .add-track-form{
+    margin-top: 20px;
+ }
+
+ .add-track-form h2{
+    margin: 10px 0;
+ }
+
+ .add-track-form .form-input{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+ }
+
+ .add-track-form input{
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+ }
+
+ .add-track-form .submit{
+    font-size: 24px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-top: 10px;
+ }
